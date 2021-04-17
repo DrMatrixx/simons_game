@@ -10,7 +10,13 @@ var level = 0;
 
 
 
-
+$(document).click(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
+});
 
 function restart(){
 level =0;
